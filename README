@@ -6,6 +6,8 @@ In order to run the executables as nodes, start the master and type in different
 - rosrun performance_test subscriber_node
 - rosrun performance_test subscriber_nodepy.py
 
-Subscriber nodes show the message:
+Publisher nodes publish a message at an increasing rate, starting at 0.1 Hz and incrementing in 0.1 Hz at every iteration.
+
+Subscriber nodes compare the rate set by the pusblishers to the real one (computed by the subscribers). Subscribers show the message:
 "Max rate: <rate_value> Hz"
-(where "rate_value" corresponds to the value for the rate set at the publisher) when the difference between the rate set at the publisher and the real rate exceeds in 50% the value of the former.
+(where "rate_value" corresponds to the value for the rate set at the publisher) the first time the difference between the rate set at the publisher and the real rate exceeds in 50% the value of the former.
