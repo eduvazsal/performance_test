@@ -1,0 +1,11 @@
+This repository contains the code for exercise 1 : performance test. 
+
+In order to run the executables as nodes, start the master and type in different shells (preferably only one publisher and one subscriber at the same time):
+- rosrun performance_test publisher_node
+- rosrun performance_test publisher_nodepy.py
+- rosrun performance_test subscriber_node
+- rosrun performance_test subscriber_nodepy.py
+
+Subscriber nodes show the message:
+"Max rate: <rate_value> Hz"
+(where "rate_value" corresponds to the value for the rate set at the publisher) when the difference between the rate set at the publisher and the real rate exceeds in 50% the value of the former.
