@@ -24,9 +24,9 @@ def pyPublisher():
 		msg = SuperAwesome()
 		msg.data = "Message"
 		pub.publish(msg)
-		rate.sleep()
 		curRate += rateIncr
-		rate = rospy.Rate(curRate)
+		rate = rospy.Rate(curRate)		
+		rate.sleep()
 
 
 if __name__ == '__main__':

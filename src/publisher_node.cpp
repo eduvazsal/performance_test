@@ -26,8 +26,8 @@ int main(int argc, char **argv)
 		msg.data = "Message";
 		pub.publish(msg);
 		ros::spinOnce();
-		rate.sleep();
 		curRate += rateIncr;
-		rate = ros::Rate(curRate);
+		rate = ros::Rate(curRate);		
+		rate.sleep();
 	}
 }
